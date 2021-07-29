@@ -13,6 +13,18 @@ curl -fLO https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chm
 ```
 sudo ./debi.sh --cdn --network-console --ethx --bbr --user root --password <这里设置 root 密码>
 ```
+```
+# 登录名：root，密码：passwd123456，可自行修改
+```
+```
+curl -fLO https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh && sudo ./debi.sh --architecture arm64 --user root --password passwd123456
+```
+```
+# 执行后，重启，开始 DD Debian 10
+```
+```
+sudo shutdown -r now
+```
 * ❗ **Oracle ARM 架构还需要添加 `--bpo-kernel` 参数，以安装新版 5.10 内核，否则系统可能无法启动**
 * 以上命令选项开启了 BBR；设置了网卡名称形式是 `eth0` 而不是 `ens3` 这种。
 * 不加 `--password` 选项会提示输入密码。
