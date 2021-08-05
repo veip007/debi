@@ -19,7 +19,9 @@ sudo shutdown -r now
 
 1、添加 back­ports 源
 可能需要的依赖：
-```bash apt install sudo lsb-release -y```
+```bash 
+apt install sudo lsb-release -y
+```
 
 
 ``` bash
