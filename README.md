@@ -18,6 +18,10 @@ sudo shutdown -r now
 ## 更新内核至5.10  
 
 1、添加 back­ports 源
+可能需要的依赖：
+```bash apt install sudo lsb-release -y```
+
+
 ``` bash
 echo "deb http://deb.debian.org/debian $(lsb_release -sc)-backports main" | tee /etc/apt/sources.list.d/backports.list
 ```
