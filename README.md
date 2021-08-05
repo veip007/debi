@@ -15,3 +15,18 @@ curl -fLO https://raw.githubusercontent.com/veip007/debi/master/debi.sh && chmod
 sudo shutdown -r now
 ```
 
+## 更新内核至5.10  
+
+1、添加 back­ports 源
+``` bash
+echo "deb http://deb.debian.org/debian $(lsb_release -sc)-backports main" | tee /etc/apt/sources.list.d/backports.list
+```
+2.更新
+```
+apt update
+```
+3.执行内核升级命令
+```bash
+apt -t $(lsb_release -sc)-backports install linux-image-$(dpkg --print-architecture) linux-headers-$(dpkg --print-architecture) --install-recommends -y
+```
+4.安装完重启，执行 uname -r 命令，现在已经是5.10了。
