@@ -18,6 +18,7 @@ sudo shutdown -r now
 ## 更新内核至5.10  
 
 1、添加 back­ports 源
+
 可能需要的依赖：
 ```bash 
 apt install sudo lsb-release -y
